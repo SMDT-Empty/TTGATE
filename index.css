@@ -1,0 +1,43 @@
+body {
+    height: 100vh;
+}
+.container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+}
+.search{
+    margin-bottom: 25px;
+}
+.message {
+    padding: 5px;
+    border-radius: 10px;
+    border: solid 4px #1c1c1c;
+    transition: .3s;
+}
+.message.dark {
+    background-color: #685c5c;
+    color: white;
+}
+
+.message__title,
+.message__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    max-height: 30px;
+    font-weight: bold;
+    overflow: hidden;
+    display: block;
+    -webkit-line-clamp: 1;
+    display: box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal
+}
